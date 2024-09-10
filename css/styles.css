@@ -410,50 +410,53 @@ section {
   padding-top: 0.5rem;
 }
 
-
-/*SERVICES PART */
-@media (max-width: 768px) {
-  .box {
-    flex: 1 1 100%; /* Stacks boxes vertically on smaller screens */
-  }
-}
-
 .services {
   background: var(--light-bg);
+  padding: 40px 20px;
 }
+
 .services .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  margin-top: 20px;
 }
+
 .services .box-container .box {
   text-align: center;
-  padding: 3rem;
+  padding: 2rem;
   background: var(--white);
   box-shadow: var(--box-shadow);
   border: var(--border);
+  transition: transform 0.2s;
 }
+
 .services .box-container .box:hover img {
   transform: translateY(-1rem);
 }
+
 .services .box-container .box img {
-  height: 40rem;
-  width: 40rem;
-  margin-bottom: 0.5rem;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
   border-radius: 3px;
-  transition: 0.2s linear;
+  transition: transform 0.2s linear;
 }
+
 .services .box-container .box h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--black);
   text-transform: capitalize;
-  padding: 1rem 0;
+  margin: 1rem 0;
 }
+
 .services .box-container .box p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--light-color);
-  line-height: 1.5;
+  line-height: 1.6;
 }
+
+
 
 .projects {
   background: var(--black);
