@@ -410,86 +410,40 @@ section {
   padding-top: 0.5rem;
 }
 
-.box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  margin-top: 20px;
-  padding: 20px;
-}
-
-.box {
-  text-align: center;
-  background: var(--white);
-  padding: 1.5rem;
-  box-shadow: var(--box-shadow);
-  border-radius: 5px;
-  transition: transform 0.2s;
-}
-
-.box:hover {
-  transform: translateY(-5px);
-}
-
-.box h3 {
-  font-size: 2rem;
-  color: var(--black);
-  margin-bottom: 0.5rem;
-}
-
-.box p {
-  font-size: 1.2rem;
-  color: var(--light-color);
-}
-
-
 .services {
   background: var(--light-bg);
-  padding: 40px 20px;
 }
-
 .services .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2rem;
-  margin-top: 20px;
 }
-
 .services .box-container .box {
   text-align: center;
-  padding: 2rem;
+  padding: 3rem;
   background: var(--white);
   box-shadow: var(--box-shadow);
   border: var(--border);
-  transition: transform 0.2s;
 }
-
 .services .box-container .box:hover img {
   transform: translateY(-1rem);
 }
-
 .services .box-container .box img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-  border-radius: 3px;
-  transition: transform 0.2s linear;
+  height: 7rem;
+  margin-bottom: 0.5rem;
+  transition: 0.2s linear;
 }
-
 .services .box-container .box h3 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: var(--black);
   text-transform: capitalize;
-  margin: 1rem 0;
+  padding: 1em 0;
 }
-
 .services .box-container .box p {
   font-size: 1.4rem;
   color: var(--light-color);
-  line-height: 1.6;
+  line-height: 1.5;
 }
-
-
 
 .projects {
   background: var(--black);
@@ -546,8 +500,103 @@ section {
   line-height: 7.5rem;
 }
 
+.reviews .slide p {
+  padding: 1.5rem;
+  background: var(--light-bg);
+  position: relative;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  line-height: 1.5;
+}
+.reviews .slide p::before {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  background: var(--light-bg);
+  transform: rotate(45deg);
+}
+.reviews .slide .user {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.reviews .slide .user img {
+  height: 7rem;
+  width: 7rem;
+}
+.reviews .slide .user h3 {
+  font-size: 2rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+.reviews .slide .user .stars {
+  padding-top: 0.5rem;
+}
+.reviews .slide .user .stars i {
+  font-size: 1.4rem;
+  color: var(--yellow);
+}
+
+.pricing {
+  background: var(--light-bg);
+}
+.pricing .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+.pricing .box-container .box {
+  background: var(--white);
+  text-align: center;
+  padding: 2rem;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+}
+.pricing .box-container .box i {
+  font-size: 3rem;
+  height: 7rem;
+  width: 7rem;
+  line-height: 7rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  background: var(--yellow);
+  color: var(--black);
+}
+.pricing .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--black);
+  text-transform: capitalize;
+  font-weight: normal;
+  padding: 0.5rem 0;
+}
+.pricing .box-container .box .price {
+  padding: 1rem 0;
+  font-size: 5rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+.pricing .box-container .box .price span {
+  font-size: 2rem;
+}
+.pricing .box-container .box .list {
+  padding: 1rem 0;
+}
+.pricing .box-container .box p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 1.5;
+}
+
 .contact {
   background: var(--black);
+  /* Media Queries for Responsive Design */
+  /* Tablet screens (max-width: 768px) */
+  /* Mobile screens (max-width: 576px) */
 }
 .contact .heading {
   color: var(--white);
@@ -561,8 +610,14 @@ section {
   flex: 1 1 41rem;
   width: 100%;
 }
+.contact iframe {
+  width: 100%;
+  border: 0;
+}
 .contact form {
-  flex: 1 1 41rem;
+  flex: none;
+  width: 529px;
+  height: auto;
   background: var(--white);
   padding: 2rem;
 }
@@ -579,6 +634,107 @@ section {
   font-size: 1.6rem;
   color: var(--light-color);
 }
+.contact form .box-p {
+  margin: 0.7rem 0;
+  width: 100%;
+  padding: 3rem 0rem;
+  font-size: 2rem;
+  color: var(--light-color);
+}
+.contact form .box-p i {
+  padding-left: 8rem;
+  padding-top: 1.1rem;
+}
+.contact form .box-p span {
+  padding-left: 16rem;
+}
+@media (max-width: 768px) {
+  .contact .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact form {
+    width: 80%;
+    padding: 1.5rem;
+  }
+  .contact .map {
+    width: 100%;
+    height: 400px;
+  }
+  .contact .heading {
+    font-size: 2.5rem;
+  }
+  .contact .box {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 576px) {
+  .contact .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact form {
+    width: 100%;
+    padding: 1rem;
+  }
+  .contact .map {
+    width: 100%;
+    height: 300px;
+  }
+  .contact .heading {
+    font-size: 2rem;
+  }
+  .contact .box {
+    font-size: 1.2rem;
+  }
+  .contact .box-p {
+    font-size: 1.4rem;
+    padding: 1.5rem 0;
+  }
+  .contact .box-p i, .contact .box-p span {
+    padding-left: 1rem;
+  }
+}
+
+.blogs {
+  background: var(--light-bg);
+}
+.blogs .slide {
+  text-align: center;
+}
+.blogs .slide:hover .image img {
+  transform: scale(1.1);
+}
+.blogs .slide .image {
+  height: 25rem;
+  width: 90%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: -3rem;
+}
+.blogs .slide .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+.blogs .slide .content {
+  padding: 2rem;
+  padding-top: 5rem;
+  background: var(--white);
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+}
+.blogs .slide .content h3 {
+  font-size: 2rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+.blogs .slide .content p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 1.5;
+}
 
 .footer {
   text-align: center;
@@ -594,6 +750,11 @@ section {
   padding-top: 1rem;
 }
 
+@media (min-width: 768px) {
+  .form {
+    width: 100%;
+  }
+}
 @media (max-width: 1200px) {
   .header {
     padding: 1.5rem 2rem;
